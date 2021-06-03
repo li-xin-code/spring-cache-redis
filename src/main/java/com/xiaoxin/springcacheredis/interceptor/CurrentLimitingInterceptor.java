@@ -24,7 +24,7 @@ public class CurrentLimitingInterceptor implements HandlerInterceptor {
     private RedisTemplate<String, String> redisTemplate;
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler){
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         if (!(handler instanceof HandlerMethod)) {
             return true;
         }
@@ -43,12 +43,12 @@ public class CurrentLimitingInterceptor implements HandlerInterceptor {
         Boolean hasKey = redisTemplate.hasKey(key);
         hasKey = hasKey != null && hasKey;
         if (!hasKey) {
-            redisTemplate.opsForValue().set(key,"1");
+            redisTemplate.opsForValue().set(key, "1");
             redisTemplate.expire(key, seconds, TimeUnit.SECONDS);
             return true;
         } else {
             String val = redisTemplate.opsForValue().get(key);
-            if (val == null){
+            if (val == null) {
                 return false;
             }
             int count = Integer.parseInt(val);

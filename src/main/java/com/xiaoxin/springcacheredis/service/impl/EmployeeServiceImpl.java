@@ -41,11 +41,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @CacheEvict(value = "emp", key = "#id")
     public void deleteEmpById(String id) {
         log.info("delete: " + id);
-//        employeeMapper.deleteEmpById(id);
+        employeeMapper.deleteEmpById(id);
     }
 
     /**
      * 因为加了 @CachePut 所以该方法必定会执行；@CachePut默认需要先执行方法再更新缓存
+     *
      * @param lastName lastname
      * @return Employee
      */

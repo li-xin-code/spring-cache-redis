@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee{
-    private String  id;
+public class Employee {
+    private String id;
     private String lastName;
     private String email;
     private Integer gender;

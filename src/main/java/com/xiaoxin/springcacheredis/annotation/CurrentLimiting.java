@@ -7,6 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * 限流
+ *
  * @author lx
  * @date 2021/1/5
  */
@@ -14,5 +15,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface CurrentLimiting {
     int seconds() default 3;
+
     int maxCount() default 10;
 }

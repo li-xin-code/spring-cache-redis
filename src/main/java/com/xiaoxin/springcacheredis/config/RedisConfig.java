@@ -24,7 +24,7 @@ public class RedisConfig {
         return template;
     }
 
-    private RedisSerializer<String> stringRedisSerializer(){
+    private RedisSerializer<String> stringRedisSerializer() {
         return new StringRedisSerializer();
     }
 

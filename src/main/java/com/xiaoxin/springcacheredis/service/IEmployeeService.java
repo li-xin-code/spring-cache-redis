@@ -10,6 +10,7 @@ import com.xiaoxin.springcacheredis.entity.Employee;
 public interface IEmployeeService {
     /**
      * 根据编号查询员工
+     *
      * @param id 编号
      * @return 员工
      */
@@ -17,6 +18,7 @@ public interface IEmployeeService {
 
     /**
      * 根据lastname查询员工
+     *
      * @param lastName lastname
      * @return 员工
      */
@@ -24,6 +26,7 @@ public interface IEmployeeService {
 
     /**
      * 更新员工
+     *
      * @param employee 员工
      * @return 员工
      */
@@ -31,12 +34,14 @@ public interface IEmployeeService {
 
     /**
      * 根据编号删除员工
+     *
      * @param id 编号
      */
     void deleteEmpById(String id);
 
     /**
      * 新增员工
+     *
      * @param employee 员工
      */
     void insertEmp(Employee employee);

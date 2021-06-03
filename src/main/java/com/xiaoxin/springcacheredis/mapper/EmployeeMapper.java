@@ -14,6 +14,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据编号查询员工
+     *
      * @param id 编号
      * @return 员工
      */
@@ -22,6 +23,7 @@ public interface EmployeeMapper {
 
     /**
      * 更新员工
+     *
      * @param employee 员工
      */
     @Update("update employee " +
@@ -31,6 +33,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据编号删除员工
+     *
      * @param id 编号
      */
     @Delete("delete from employee where id = #{id}")
@@ -38,6 +41,7 @@ public interface EmployeeMapper {
 
     /**
      * 新增员工
+     *
      * @param employee 员工
      */
     @Insert("insert into employee(lastName,email,gender,dId) " +
@@ -46,6 +50,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据lastName查询员工
+     *
      * @param lastName lastName
      * @return 员工
      */

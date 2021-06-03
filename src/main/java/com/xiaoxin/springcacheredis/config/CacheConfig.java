@@ -24,8 +24,8 @@ import java.util.Map;
 public class CacheConfig {
 
     @Bean("empKeyGenerator")
-    public KeyGenerator keyGenerator(){
-        return (o, method, objects) -> objects[0]+"";
+    public KeyGenerator keyGenerator() {
+        return (o, method, objects) -> objects[0] + "";
     }
 
     @Bean
@@ -52,9 +52,9 @@ public class CacheConfig {
 
     private Map<String, RedisCacheConfiguration> initCacheConfigMap() {
         Map<String, RedisCacheConfiguration> map = new HashMap<>(16);
-        map.put("emp",this.defaultCacheConfig(100));
-        map.put("emp-hot",this.defaultCacheConfig(1000));
-        map.put("dep",this.defaultCacheConfig(1000));
+        map.put("emp", this.defaultCacheConfig(100));
+        map.put("emp-hot", this.defaultCacheConfig(1000));
+        map.put("dep", this.defaultCacheConfig(1000));
         return map;
     }
 
